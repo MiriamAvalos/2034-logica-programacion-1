@@ -6,7 +6,8 @@ console.log(numberUser);
 
 // operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
     if (numberUser == numeroSecreto){
-    alert("¡Felicidades, acertaste el número!")
+        // Se emplea template string para almacenar el valor de la variable
+    alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
 }else{
     alert("Lo siento, no acertaste el número") 
 }
