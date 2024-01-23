@@ -12,12 +12,18 @@ console.log('Resultado de la comparación:', numberUser == numeroSecreto);
     alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
     // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
 }else{
+    //se añaden condicionales anidados para dar pistas al usuario
+    if (numberUser > numeroSecreto){
+        alert("El número secreto es menor")
+    }else{
+        alert("El número secreto es mayor")
+    }
     // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
     console.log('Valor del número secreto:', numeroSecreto);
     alert("Lo siento, no acertaste el número") 
 }
 
-/* PARA USAR LA IGUALDAD ESTRICTA PRIMERO SE TIENE QUE CONVERTIR AL MISMO TIPO EL STRING QUE EL USUARIO INGRESA A TIPO NUMERO CON parseInt 
+ /*PARA USAR LA IGUALDAD ESTRICTA PRIMERO SE TIENE QUE CONVERTIR AL MISMO TIPO EL STRING QUE EL USUARIO INGRESA A TIPO NUMERO CON parseInt 
 
 
 let numeroSecreto = 6;
@@ -152,6 +158,3 @@ console.log(sumar(numeroUno, numeroDos));  // Aquí se mostrará el resultado en
 
 
         */
-
-
-
