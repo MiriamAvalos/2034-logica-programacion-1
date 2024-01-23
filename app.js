@@ -1,14 +1,19 @@
 let numeroSecreto = 6;
 //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
 let numberUser = prompt("¿Me indicas un número entre 1 y 10?")
+// Agrega un console.log para verificar el valor de "numberUser" después de la entrada del usuario
+console.log('Valor de intento:', numberUser);
 
-console.log(numberUser);
-
+// Agrega un console.log para verificar la comparación entre "numberUser" y "numeroSecreto"
+console.log('Resultado de la comparación:', numberUser == numeroSecreto);
 // operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
     if (numberUser == numeroSecreto){
-        // Se emplea template string para almacenar el valor de la variable
+        // Se emplea template string para almacenar variable
     alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
+    // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
 }else{
+    // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
+    console.log('Valor del número secreto:', numeroSecreto);
     alert("Lo siento, no acertaste el número") 
 }
 
