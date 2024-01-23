@@ -1,28 +1,31 @@
-let numeroSecreto = 6;
-//método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
-let numberUser = prompt("¿Me indicas un número entre 1 y 10?")
-// Agrega un console.log para verificar el valor de "numberUser" después de la entrada del usuario
-console.log('Valor de intento:', numberUser);
+    let numeroSecreto = 6;
+    let numberUser = 0;
+    //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
+    while (numberUser != numeroSecreto) { 
+    //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
+    numberUser = prompt("¿Me indicas un número entre 1 y 10?")
+    // Agrega un console.log para verificar el valor de "numberUser" después de la entrada del usuario
+    console.log('Valor de intento:', numberUser);
 
-// Agrega un console.log para verificar la comparación entre "numberUser" y "numeroSecreto"
-console.log('Resultado de la comparación:', numberUser == numeroSecreto);
-// operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
-    if (numberUser == numeroSecreto){
-        // Se emplea template string para almacenar variable
-    alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
-    // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
-}else{
-    //se añaden condicionales anidados para dar pistas al usuario
-    if (numberUser > numeroSecreto){
-        alert("El número secreto es menor")
-    }else{
-        alert("El número secreto es mayor")
+    // Agrega un console.log para verificar la comparación entre "numberUser" y "numeroSecreto"
+    console.log('Resultado de la comparación:', numberUser == numeroSecreto);
+    // operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
+        if (numberUser == numeroSecreto){
+            // Se emplea template string para almacenar variable
+        alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
+        // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
+    }else{ 
+        //se añaden condicionales anidados para dar pistas al usuario
+        if (numberUser > numeroSecreto){
+            alert("El número secreto es menor")
+        }else{
+            alert("El número secreto es mayor")
+        }
+        // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
+        console.log('Valor del número secreto:', numeroSecreto);
+        //alert("Lo siento, no acertaste el número") 
     }
-    // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
-    console.log('Valor del número secreto:', numeroSecreto);
-    alert("Lo siento, no acertaste el número") 
-}
-
+    };
  /*PARA USAR LA IGUALDAD ESTRICTA PRIMERO SE TIENE QUE CONVERTIR AL MISMO TIPO EL STRING QUE EL USUARIO INGRESA A TIPO NUMERO CON parseInt 
 
 
