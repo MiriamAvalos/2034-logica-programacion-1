@@ -1,5 +1,7 @@
     let numeroSecreto = 6;
     let numberUser = 0;
+    let intentos = 1;
+    let palabraIntento = "intento";
     //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
     while (numberUser != numeroSecreto) { 
     //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
@@ -12,7 +14,7 @@
     // operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
         if (numberUser == numeroSecreto){
             // Se emplea template string para almacenar variable
-        alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}`)
+        alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}. Lo hiciste en ${intentos} ${palabraIntento}`)
         // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
     }else{ 
         //se añaden condicionales anidados para dar pistas al usuario
@@ -21,6 +23,9 @@
         }else{
             alert("El número secreto es mayor")
         }
+        //incrementamos el contador cuando el usuario no acierta
+        intentos = intentos + 1;
+        palabraIntento = "intentos";
         // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
         console.log('Valor del número secreto:', numeroSecreto);
         //alert("Lo siento, no acertaste el número") 
