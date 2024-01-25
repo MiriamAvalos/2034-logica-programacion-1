@@ -25,7 +25,9 @@
             alert("El número secreto es mayor")
         }
         //incrementamos el contador cuando el usuario no acierta
-        intentos = intentos + 1;
+        //intentos = intentos + 1;
+        //intentos += 1;
+        intentos++;
         palabraIntento = "intentos";
 
         if(intentos > maximosIntentos){
