@@ -26,6 +26,11 @@
         //incrementamos el contador cuando el usuario no acierta
         intentos = intentos + 1;
         palabraIntento = "intentos";
+
+        if(intentos > 3){
+            alert("Llegaste al número máximo de intentos")
+            break;
+        }
         // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
         console.log('Valor del número secreto:', numeroSecreto);
         //alert("Lo siento, no acertaste el número") 
@@ -166,3 +171,15 @@ console.log(sumar(numeroUno, numeroDos));  // Aquí se mostrará el resultado en
 
 
         */
+
+
+
+
+
+
+
+
+
+
+       
+        
