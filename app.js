@@ -2,6 +2,7 @@
     let numberUser = 0;
     let intentos = 1;
     let palabraIntento = "intento";
+    let maximosIntentos = 3;
     //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
     while (numberUser != numeroSecreto) { 
     //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
@@ -27,8 +28,8 @@
         intentos = intentos + 1;
         palabraIntento = "intentos";
 
-        if(intentos > 3){
-            alert("Llegaste al número máximo de intentos")
+        if(intentos > maximosIntentos){
+            alert(`Llegaste al número máximo de ${maximosIntentos} intentos`)
             break;
         }
         // Agrega un console.log para verificar el valor de "numberUser" cuando el jugador se equivoca
