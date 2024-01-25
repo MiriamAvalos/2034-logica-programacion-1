@@ -1,7 +1,7 @@
     let numeroSecreto = 6;
     let numberUser = 0;
     let intentos = 1;
-    let palabraIntento = "intento";
+    //let palabraIntento = "intento";
     let maximosIntentos = 3;
     //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
     while (numberUser != numeroSecreto) { 
@@ -15,7 +15,7 @@
     // operador de igualdad no estricta (==), JavaScript intenta convertir los operandos al mismo tipo antes de realizar la comparación. En este caso, la cadena ingresada por el usuario se convierte a número, y luego se compara con numeroSecreto. Es por eso que funciona cuando usas ==.
         if (numberUser == numeroSecreto){
             // Se emplea template string para almacenar variable
-        alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}. Lo hiciste en ${intentos} ${palabraIntento}`)
+        alert(`¡Felicidades, acertaste! El número es: ${numeroSecreto}. Lo hiciste en ${intentos} ${intentos == 1 ? "intento" : "intentos"}`);
         // también puede ser así : alert('Acertaste el número secreto es: ' + numeroSecreto);
     }else{ 
         //se añaden condicionales anidados para dar pistas al usuario
@@ -28,7 +28,7 @@
         //intentos = intentos + 1;
         //intentos += 1;
         intentos++;
-        palabraIntento = "intentos";
+        //palabraIntento = "intentos";
 
         if(intentos > maximosIntentos){
             alert(`Llegaste al número máximo de ${maximosIntentos} intentos`)
