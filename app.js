@@ -7,9 +7,9 @@
     //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
     while (numberUser != numeroSecreto) { 
     //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
-    numberUser = prompt("¿Me indicas un número entre 1 y 10?")
+    numberUser = parseInt(prompt("¿Me indicas un número entre 1 y 10?"));
     // Agrega un console.log para verificar el valor de "numberUser" después de la entrada del usuario
-    console.log('Valor de intento:', numberUser);
+    console.log(typeof(numberUser));
 
     // Agrega un console.log para verificar la comparación entre "numberUser" y "numeroSecreto"
     console.log('Resultado de la comparación:', numberUser == numeroSecreto);
