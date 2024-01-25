@@ -1,8 +1,9 @@
-    let numeroSecreto = 6;
+    let numeroSecreto = Math.floor(Math.random()*10)+1
     let numberUser = 0;
     let intentos = 1;
     //let palabraIntento = "intento";
     let maximosIntentos = 3;
+    console.log(numeroSecreto);
     //se añade loop/bucle para decir que mientras la condición de numero usuario es distinta a numero secreto se va a repetir el juego
     while (numberUser != numeroSecreto) { 
     //método para mostrar un cuadro de diálogo que le pide al usuario que ingrese información.
